@@ -7,7 +7,7 @@ A recommended way to do it is to run it through a compute session through proxy 
 ## Set up the script
 1. Clone to repo to anywhere you want on your local machine
 2. Ensure you have your cluster log in node set up in ``~/.ssh/config``
-3. Change the following argument in the ``/home/zf2dong/ric/codes/ziti/scripts/2_val_vae.sh`` script:
+3. Change the following argument in the ``launch_vscode_on_compute.sh`` script:
    - REMOTE_USER (both instances, your killarney user name)
    - WORKING_DIR (your vscode landing directory) 
    - SLURM_ARGS (your resource allocation requirement)
@@ -24,7 +24,7 @@ Host *
 ## Using the script
 Every time that you want to start working, simply run:
 
-``bash /home/zf2dong/ric/codes/ziti/scripts/2_val_vae.sh``
+``bash launch_vscode_on_compute.sh``
 
 And wait (and enter password and/or approve Duo prompt whenever being prompted to do so). The script will automatically log into your log in node, start requesting resources if no existing resource is available, and connect to it via Remote-SSH once a node is allocated to you.
 
